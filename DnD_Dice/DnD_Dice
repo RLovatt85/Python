@@ -1,0 +1,69 @@
+import random
+
+dice = ''
+
+while dice != 'quit':
+
+    dice = input("Which dice would you like to roll? 20, 12, 10, 8, 6 or 4 or 'quit' ")
+    # dices mins and maxs
+    dicemin = 1
+    twentymax = 20
+    twelvemax = 12
+    tenmax = 10
+    eightmax = 8
+    sixmax = 6
+    fourmax = 4
+
+    # different dices results
+    twentyres = (random.randint(dicemin, twentymax))
+    twelveres = (random.randint(dicemin, twelvemax))
+    tenres = (random.randint(dicemin, tenmax))
+    eightres = (random.randint(dicemin, eightmax))
+    sixres = (random.randint(dicemin, sixmax))
+    fourres = (random.randint(dicemin, fourmax))
+
+    if dice == 'quit' or dice == "Quit":
+        break
+
+
+    # 20
+    if dice == "20":
+        print("You rolled a...", twentyres)
+        print("\n")
+        if twentyres == 20:
+            print("Nat 20! Nice!")
+        if twentyres == 1:
+            print("Ouch")
+    # 12
+    elif dice == "12":
+        print("You rolled a...", twelveres)
+        print("\n")
+        if twelveres == 1:
+            print("Ouch")
+    # 10
+    elif dice == "10":
+        print("You rolled a...", tenres)
+        print("\n")
+        if tenres == 1:
+            print("Ouch")
+    # 8
+    elif dice == "8":
+        print("You rolled a...", eightres)
+        print("\n")
+        if eightres == 1:
+            print("Ouch")
+    # 6
+    elif dice == "6":
+        print("You rolled a...", sixres)
+        print("\n")
+        if sixres == 1:
+            print("Ouch")
+    # 4
+    elif dice == "4":
+        print("You rolled a...", fourres)
+        print("\n")
+        if fourres == 1:
+            print("Ouch")
+    else:
+        print("Not a real die.")
+        print("\n")

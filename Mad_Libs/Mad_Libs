@@ -1,0 +1,36 @@
+import random
+import time
+
+rnoun = ['dog', 'cat', 'duck', 'Buckbeak']
+radv = ['quickly', 'slowly', 'painfully', 'swiftly']
+radj = ['spicy', 'salty', 'bland', 'smelly']
+rcol = ['red', 'blue', 'black', 'white']
+rverb = ['walked', 'danced', 'swam', 'jogged']
+
+madlib = "\nThe {} {} {} {} {}!"
+
+
+# this function takes in parameters
+# calls for noun, adjectives, adverbs and colors
+def f_word(type, default_type):
+    i = 0
+    word = input("Enter a " + type + ": ")
+
+    # this while loop counts until 3 then chooses a random word from the lists above
+    while word == "":
+        i += 1
+        word = input("Please enter a " + type + ": ")
+        if i == 3:
+            print("\nFine, I'll choose one for you!\n")
+            word = (random.choice(default_type))
+    return word
+
+
+adj = f_word("adjective", radj)
+color = f_word("color", rcol)
+noun = f_word("noun", rnoun)
+adv = f_word("adverb", radv)
+verb =f_word("verb", rverb)
+
+time.sleep(2.5)
+print(madlib.format(adj, color, noun, verb, adv))
